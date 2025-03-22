@@ -6,10 +6,10 @@ import Home from "./_root/pages/Home";
 const App = () => {
   return (
     <>
-      <Router basename="/">
+      <Router basename="/-extension-manager">
         <Routes>
           <Route element={<RootLayout />}>
-            <Route path="/" element={<Home/>}></Route>
+            <Route path="/" element={<Home />}></Route>
           </Route>
         </Routes>
       </Router>

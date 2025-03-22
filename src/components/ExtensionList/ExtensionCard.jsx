@@ -9,10 +9,12 @@ function ExtensionCard({
   toggleActive,
   removeExtension,
 }) {
+  const url = import.meta.env.BASE_URL;
+  
   return (
     <div className="bg-neutral-0 rounded-2xl flex flex-col justify-between h-[200px] border border-neutral-100 dark:border-neutral-600 shadow-sm dark:bg-neutral-800 pb-5 p-4">
       <div className="flex gap-4 items-start">
-        <img src={logo} />
+        <img src={url+"/" + logo} />
         <div>
           <h3 className="text-xl font-bold text-neutral-900 dark:text-neutral-100 mb-1.5">
             {name}

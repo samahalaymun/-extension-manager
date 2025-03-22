@@ -3,7 +3,7 @@ import Logo from './Logo';
 
 function Header() {
   const[darkMode,setDarkMode]=useState(localStorage.getItem("theme")==="dark")
-  console.log(darkMode);
+   const url = import.meta.env.BASE_URL;
 
   useEffect(()=>{
     if(darkMode){
@@ -24,8 +24,8 @@ function Header() {
         onClick={() => setDarkMode(!darkMode)}
         className="p-4 rounded-2xl cursor-pointer bg-neutral-100 dark:bg-neutral-700 dark:hover:bg-neutral-600 hover:bg-neutral-300"
       >
-        {!darkMode && <img src="/assets/images/icon-moon.svg" />}
-        {darkMode && <img src="/assets/images/icon-sun.svg" />}
+        {!darkMode && <img src={url+"/assets/images/icon-moon.svg"} />}
+        {darkMode && <img src={url+"/assets/images/icon-sun.svg"} />}
       </button>
     </header>
   );
